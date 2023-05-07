@@ -1,10 +1,11 @@
 # COVIDpredictions
-Predict number of COVID cases per country
-Introduction 
+# Predict number of COVID cases per country
+
+# Introduction 
 2020 was a year like no other. January 2020 began with detrimental wildfires which ushered in two months later what would be a full year of the worldwide deadly pandemic, Covid-19. From March 2020 to March 2021, there have been over 150 million cases with 3.15 million deaths reported. Whether through adapting our work life to be entirely virtual in a matter of days, national lockdowns, and restrictions, knowing friends or loved ones who have fallen ill or contracting Covid 19 ourselves, we have all felt the effects and dangers of this pandemic. The timeliness and importance of understanding Covid data motivated us to choose this project. The goal of this analysis was to predict the total number of Covid-19 cases each country can expect to have in the near future. If countries can accurately plan the number of cases they might have, they can be more prepared with lifesaving equipment in hospitals or enact certain restrictions to either help prevent the spread or keep the sick alive and promote recovery.
 In this project, we used supervised and unsupervised models to predict the total cases of Covid. We used K-Means Clustering as our unsupervised model, which helped us visualize how our data groups together based on similar qualities. Our supervised models were KNN, Random Forest, and Linear Regression.
 
-Description of Data Set
+# Description of Data Set
 The data set used for this project was found on Kaggle Competitions, https://www.kaggle.com/imdevskp/corona-virus-report?select=worldometer_data.csv. There are sixteen variables in this data set. A description of each of them is listed below:
 Country/Region: Countries or regions with registered COVID cases
 Continent: Continents with registered COVID cases
@@ -28,20 +29,20 @@ The second analysis had a much better separation of data. Most data points were 
 What our data indicates is that of 208 countries, the majority (170) have a similar number of Covid cases reported around the mean as they fall into the same group, cluster 1. 16.8% of our data falls in cluster 0 and only 1.4% falls into our cluster 2. There is a steep drop off from cluster 1 to cluster 0 and 2 showing most of our data falls somewhere in the middle, with slight potential outliers on both the high and low end.
 The countries that fall into the smallest group of 3 clusters are the USA, India, and Brazil. The fact that these 3 countries have the highest cases could be influenced by other factors like having very large populations and some of the largest number of tests, both of which will increase the number of cases. On the other hand, although Indonesia and Pakistan are the next closest in population to Brazil, they have a very low number of tests reported which naturally decreases the total number of reported Covid cases. A lack of Covid testing in countries with similar populations may explain why there are less countries included in this small cluster.
 
-Description of Learning Algorithms 
+# Description of Learning Algorithms 
 Random Forest: This model combines multiple decision trees to create one bigger machine learning algorithm. The goal of an individual decision tree is to find the best split that will give us the lowest degree of impurity. A single tree does not give us the best results, but when it is combined with multiple trees, we get an output that is close to the correct answer, which is why the concept of the wisdom of the crowds is applicable for the random forest model.
 Random forest picks randomly K data points with replacement from the training set. Then, it builds a decision tree associated with these K data points. A number of trees to build is chosen and the previous steps are repeated. We used Grid Search to find the optimal number of trees for our model. When there is a new data point, the model makes each one of our trees find the y value for that point by taking the average y of all the points in that leaf that our new point falls into. Our Random Forest regressor reaches a conclusion by finding the average of each tree’s prediction. A metric like the Root Mean Square Error effectively evaluates the performance of this model.
 KNN; The goal of a KNN regressor model is to assign a value based on the average of the values of our k nearest neighbors. This model loads our data set and then works with the number of nearest neighbors we choose. We found the optimal number of nearest neighbors by using Grid Search. To predict the y value for a new data point, this model measures the distance of the new data point to every other data point in our data set. After these distances get sorted, this model looks at the closest ones. The performance of this model is optimally assessed with the calculation of the Root Mean Square Error.
 Linear Regression: The goal of a Linear Regression model is to minimize the vertical distance between all the data points and our line. This model predicts continuous values, like the number of Covid cases in a country. The model works by calculating a regression line that is as close to every data point as possible. The closer each data point is to our regression line, the better the model fits our data. Linear regression uses metrics like Mean Absolute Error (MAE), Mean Square Error (MSE) and Root Mean Square Error (RMSE) to evaluate the performance of the regression model. RMSE is the most popular evaluation metric. RMSE has the same unit as our dependent variable, which facilitates the evaluation of our model.
 
-Discussion and Conclusions 
+# Discussion and Conclusions 
 At a high level, our data visualizations are logical because we see that the top countries that cluster together have higher populations and higher testing, which means they are more likely to report higher Covid cases.
 We optimized two of our machine learning models using Grid Search. For our random forest regressor model, we chose 10 decision trees. For our KNN regressor model, we chose 4 nearest neighbors. Our linear regression model did not need optimization due to its limited number of possible parameters.
 We used RMSE to compare the performance of all our models. For Random Forest, our RMSE was 94,927.59. For KNN, our RMSE was 42,680.89. For Linear Regression, our RMSE was 193,163.62. With these results, we can determine that our Random Forest Model performed the best because it has the lowest error values. The lower the RMSE, the lower the error and the better our model fits our data to predict future values more accurately. 
 Our KNN model performed better than the Random Forest and Linear Regression models. We compared our RMSE to the mean of our output variable to see how much of our data is explained by our RMSE. Our best RMSE is 42,680.89 and our mean of total cases is 9.215603e+04 (92,156.03), which means that a good portion of our data is accounted for in our RMSE and thus, it is a great predictor of Covid cases per country. 
 
-Statement of Individual Contributions 
+# Statement of Individual Contributions 
 The work on both the analytics and this report was split between the two of us. Julia was responsible for clustering and the linear regression model. Fernanda completed the data cleaning, visualizations, and KNN and Random Forest models. We both shared responsibility for the written analysis.
 
-References
+# References
 The data set used for this project was found on Kaggle Competitions (https://www.kaggle.com/imdevskp/corona-virus-report?select=worldometer_data.csv). 
