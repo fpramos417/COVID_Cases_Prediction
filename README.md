@@ -1,5 +1,8 @@
 # COVIDpredictions
-# Predict number of COVID cases per country
+## Prediction of Covid Cases by Country
+## Instructor: Dr. Pinar Ozturk 
+## Authors: Fernanda Padilla & Julia Gittins  
+
 
 # Introduction 
 2020 was a year like no other. January 2020 began with detrimental wildfires which ushered in two months later what would be a full year of the worldwide deadly pandemic, Covid-19. From March 2020 to March 2021, there have been over 150 million cases with 3.15 million deaths reported. Whether through adapting our work life to be entirely virtual in a matter of days, national lockdowns, and restrictions, knowing friends or loved ones who have fallen ill or contracting Covid 19 ourselves, we have all felt the effects and dangers of this pandemic. The timeliness and importance of understanding Covid data motivated us to choose this project. The goal of this analysis was to predict the total number of Covid-19 cases each country can expect to have in the near future. If countries can accurately plan the number of cases they might have, they can be more prepared with lifesaving equipment in hospitals or enact certain restrictions to either help prevent the spread or keep the sick alive and promote recovery.
