@@ -1,7 +1,6 @@
-# COVIDpredictions
-## Prediction of Covid Cases by Country
-## Instructor: Dr. Pinar Ozturk 
-## Authors: Fernanda Padilla & Julia Gittins  
+# Prediction of Covid Cases by Country
+### Instructor: Dr. Pinar Ozturk 
+### Authors: Fernanda Padilla & Julia Gittins  
 
 
 # Introduction 
